@@ -1,11 +1,13 @@
-import { Component, signal } from '@angular/core';
+import { Component } from '@angular/core';
+import { AvlTreeComponent } from './avl-tree/avl-tree.component';
 
 @Component({
   selector: 'app-root',
-  imports: [],
-  templateUrl: './app.html',
-  styleUrl: './app.css'
+  standalone: true,
+  imports: [AvlTreeComponent],
+  template: `<app-avl-tree></app-avl-tree>`,
+  styles: []
 })
 export class App {
-  protected readonly title = signal('temp-asl-visualizer');
+  title = 'asl-visualizer';
 }
